@@ -2,7 +2,8 @@ let userScore = 0;
 let computerScore = 0;
 const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("pc-score");
-const result_p = document.querySelector(".result p");
+const result_p = document.getElementById("result");
+const result_c = document.getElementById("computer");
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
@@ -15,6 +16,7 @@ function getComputerChoice() {
 
 function game(userChoice) {
     let pcChoice = getComputerChoice();
+    result_c.innerHTML = `Computer chose: ${pcChoice}`;
     switch (userChoice + pcChoice) {
         case 'PaperRock':
         case 'ScissorsPaper':
